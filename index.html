@@ -1,60 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday [Her Name]!</title>
+    <style>
+        /* Basic reset */
+        body, h1, p { margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; color: #333; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+        /* Header */
+        header { text-align: center; padding: 50px 0; background-color: #ffcd00; }
+        header h1 { font-size: 3em; color: #fff; }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 40px 20px; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .hero img { width: 100%; max-width: 500px; border-radius: 10px; }
+
+        /* Personal Message */
+        .message { padding: 30px 20px; background-color: #ffea80; border-radius: 10px; margin-top: 30px; }
+        .message h2 { font-size: 2em; margin-bottom: 10px; }
+        .message p { font-size: 1.2em; line-height: 1.6; }
+
+        /* Photo Gallery */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .gallery img { width: 100%; border-radius: 10px; transition: transform 0.3s ease; }
+        .gallery img:hover { transform: scale(1.05); }
+
+        /* Timeline */
+        .timeline { margin-top: 40px; padding: 20px 0; background-color: #fff; }
+        .timeline h2 { font-size: 2em; text-align: center; margin-bottom: 20px; }
+        .timeline ul { list-style: none; padding: 0; }
+        .timeline li { font-size: 1.2em; padding: 10px 0; border-bottom: 1px solid #ddd; }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px 0; background-color: #ffcd00; color: #fff; margin-top: 50px; }
+    </style>
 </head>
 <body>
-  <div class="moon">
-    <div class="crater1"></div>
-    <div class="crater2"></div>
-    <div class="crater3"></div>
-  </div>
 
-  <canvas id="canvas"></canvas>
+    <header>
+        <h1>Happy Birthday, [Her Name]!</h1>
+    </header>
 
-  <div id="sea"></div>
-  <div id="beach"></div>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="your-photo.jpg" alt="A memorable photo of her">
+            <p>Celebrating you today and every day!</p>
+        </section>
 
-  <img src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png" alt="Jumping People" id="people" />
+        <!-- Personal Message -->
+        <section class="message">
+            <h2>To My Favorite Person</h2>
+            <p>
+                [Write a heartfelt message here. Something personal about your relationship, her qualities, and why she means so much to you.]
+            </p>
+        </section>
 
-  <div id="merrywrap" class="merrywrap">
-    <div class="giftbox">
-      <div class="cover">
-        <div></div>
-      </div>
-      <div class="box"></div>
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            <h2>Our Favorite Memories</h2>
+            <img src="photo1.jpg" alt="Memory 1">
+            <img src="photo2.jpg" alt="Memory 2">
+            <img src="photo3.jpg" alt="Memory 3">
+            <img src="photo4.jpg" alt="Memory 4">
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline">
+            <h2>Timeline of Our Best Moments</h2>
+            <ul>
+                <li>Our first meeting at [place/event] – [date]</li>
+                <li>That unforgettable trip to [destination] – [date]</li>
+                <li>When you made me laugh so hard at [event] – [date]</li>
+                <!-- Add more special moments here -->
+            </ul>
+        </section>
     </div>
 
-    <div class="icons">
-      <div class="row">
-        <span>H</span>
-        <span>a</span>
-        <span>p</span>
-        <span>p</span>
-        <span>y</span>
-      </div>
-      <div class="row">
-        <span>B</span>
-        <span>i</span>
-        <span>r</span>
-        <span>t</span>
-        <span>h</span>
-        <span>d</span>
-        <span>a</span>
-        <span>y</span>
-      </div>
-      <div class="row">
-        <span>[Her</span>
-        <span>Name]</span>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <p>Wishing you all the love and happiness in the world!</p>
+    </footer>
 
-  <div id="video"></div>
-
-  <script src="js/index.js"></script>
 </body>
 </html>

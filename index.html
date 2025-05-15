@@ -7,12 +7,30 @@
     <style>
         /* Basic reset */
         body, h1, p { margin: 0; padding: 0; }
-        body { font-family: Arial, sans-serif; background-color: #f8f8f8; color: #333; }
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; color: #333; overflow-x: hidden; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
         /* Header */
-        header { text-align: center; padding: 50px 0; background-color: #ffcd00; }
+        header { text-align: center; padding: 50px 0; background-color: #ffcd00; position: relative; overflow: hidden; }
         header h1 { font-size: 3em; color: #fff; }
+
+        /* Cake Animation */
+        .cake {
+            width: 120px;
+            margin: 20px auto;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        .cake img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
 
         /* Hero Section */
         .hero { text-align: center; padding: 40px 20px; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
@@ -68,6 +86,9 @@
 
     <header>
         <h1>Happy Birthday, RABIAA!</h1>
+        <div class="cake">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/birthday-156291_960_720.png" alt="Birthday Cake">
+        </div>
     </header>
 
     <div class="container">

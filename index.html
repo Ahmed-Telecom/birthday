@@ -1,179 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday RABIAA!</title>
-  <style>
-    body, h1, p { margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #fff0f5, #ffffff, #fff0f5);
-      color: #333;
-      overflow-x: hidden;
-      position: relative;
-    }
-    .container {
-      width: 90%; max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-    header {
-      text-align: center;
-      padding: 50px 0;
-      background-color: #ff69b4;
-      position: relative;
-      overflow: hidden;
-    }
-    header h1 {
-      font-size: 3em;
-      color: #fff;
-    }
-    .cake {
-      width: 120px;
-      margin: 20px auto;
-      animation: bounce 2s infinite;
-    }
-    .cake img {
-      width: 100%; border-radius: 10px;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .hero img {
-      width: 100%;
-      max-width: 500px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .message {
-      padding: 30px 20px;
-      background-color: #ffe0ec;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-    .message h2 { font-size: 2em; margin-bottom: 10px; }
-    .message p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      text-align: center;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .gallery img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover { transform: scale(1.05); }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday RABIAA!</title>
+    <style>
+        /* Basic reset */
+        body, h1, p { margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 
-    /* Decorative elements */
-    .stars, .petals, .balloons {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-    }
-    .petal, .balloon, .star {
-      position: absolute;
-      animation: floatUp 12s linear infinite;
-      opacity: 0.6;
-    }
-    .petal {
-      width: 20px; height: 20px;
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-    }
-    .balloon {
-      width: 25px; height: 35px;
-      background: url('https://cdn-icons-png.flaticon.com/512/3468/3468604.png') no-repeat center/contain;
-    }
-    .star {
-      width: 15px; height: 15px;
-      background: url('https://cdn-icons-png.flaticon.com/512/1828/1828884.png') no-repeat center/contain;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(100vh); opacity: 0; }
-      50% { opacity: 0.6; }
-      100% { transform: translateY(-10vh); opacity: 0; }
-    }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #ff69b4;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 { font-size: 3em; color: #fff; }
 
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #ff69b4;
-      color: #fff;
-      margin-top: 50px;
-    }
-  </style>
+        /* Cake Animation */
+        .cake {
+            width: 120px;
+            margin: 20px auto;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        .cake img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Personal Message */
+        .message {
+            padding: 30px 20px;
+            background-color: #ffe0ec;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .message h2 { font-size: 2em; margin-bottom: 10px; }
+        .message p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover { transform: scale(1.05); }
+
+        /* Floating Hearts */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            opacity: 0.7;
+            transform: rotate(45deg);
+            animation: floatUp 10s linear infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(45deg); }
+            100% { transform: translateY(-10vh) rotate(45deg); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff69b4;
+            color: #fff;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-  <div class="stars">
-    <div class="star" style="left: 10%; animation-delay: 1s;"></div>
-    <div class="star" style="left: 20%; animation-delay: 2s;"></div>
-    <div class="star" style="left: 80%; animation-delay: 3s;"></div>
-  </div>
-  <div class="petals">
-    <div class="petal" style="left: 5%; animation-delay: 0s;"></div>
-    <div class="petal" style="left: 25%; animation-delay: 2s;"></div>
-    <div class="petal" style="left: 50%; animation-delay: 4s;"></div>
-    <div class="petal" style="left: 75%; animation-delay: 1s;"></div>
-  </div>
-  <div class="balloons">
-    <div class="balloon" style="left: 15%; animation-delay: 0.5s;"></div>
-    <div class="balloon" style="left: 60%; animation-delay: 1.5s;"></div>
-    <div class="balloon" style="left: 85%; animation-delay: 2.5s;"></div>
-  </div>
 
-  <header>
-    <h1>Happy Birthday, RABIAA!</h1>
-    <div class="cake">
-      <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/birthday-156291_960_720.png" alt="Birthday Cake">
+    <div class="hearts">
+        <!-- More floating hearts with varied delays and spacing -->
+        <div class="heart" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="heart" style="left: 10%; animation-delay: 1s;"></div>
+        <div class="heart" style="left: 15%; animation-delay: 2s;"></div>
+        <div class="heart" style="left: 20%; animation-delay: 3s;"></div>
+        <div class="heart" style="left: 30%; animation-delay: 0.5s;"></div>
+        <div class="heart" style="left: 40%; animation-delay: 1.5s;"></div>
+        <div class="heart" style="left: 50%; animation-delay: 2.5s;"></div>
+        <div class="heart" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="heart" style="left: 70%; animation-delay: 3.5s;"></div>
+        <div class="heart" style="left: 80%; animation-delay: 4.5s;"></div>
+        <div class="heart" style="left: 90%; animation-delay: 5s;"></div>
+        <div class="heart" style="left: 95%; animation-delay: 6s;"></div>
     </div>
-  </header>
 
-  <div class="container">
-    <section class="hero">
-      <img src="photo1.jpg" alt="A memorable photo of her" />
-      <p>Celebrating you today and every day!</p>
-    </section>
+    <header>
+        <h1>Happy Birthday, RABIAA!</h1>
+        <div class="cake">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/birthday-156291_960_720.png" alt="Birthday Cake">
+        </div>
+    </header>
 
-    <section class="message">
-      <h2>To My Favorite Person</h2>
-      <p>
-        The Support System | The Everyday Motivation | The Unmatched Light<br />
-        The Reason Behind So Many Good Things<br />
-        You Make Life 10x Better Just By Being In It<br />
-        The One Who Deserves All the Happiness the World Can Offer
-      </p>
-    </section>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="photo1.jpg" alt="A memorable photo of her">
+            <p>Celebrating you today and every day!</p>
+        </section>
 
-    <section class="gallery">
-      <h2>Our Favorite Memories</h2>
-      <img src="photo.jpg" alt="Memory 1" />
-      <img src="photo3.jpg" alt="Memory 2" />
-      <img src="photo4.jpg" alt="Memory 3" />
-    </section>
-  </div>
+        <!-- Personal Message -->
+        <section class="message">
+            <h2>To My Favorite Person</h2>
+            <p>
+                The Support System | The Everyday Motivation | The Unmatched Light <br>
+                The Reason Behind So Many Good Things <br>
+                You Make Life 10x Better Just By Being In It <br>
+                The One Who Deserves All the Happiness the World Can Offer
+            </p>
+        </section>
 
-  <footer>
-    <p>Wishing you all the love and happiness in the world!</p>
-  </footer>
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            <h2>Our Favorite Memories</h2>
+            <img src="photo.jpg" alt="Memory 1">
+            <img src="photo3.jpg" alt="Memory 2">
+            <img src="photo4.jpg" alt="Memory 3">
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Wishing you all the love and happiness in the world!</p>
+    </footer>
+
 </body>
 </html>
